@@ -15,7 +15,7 @@ steps:
 
 - task: Bash@3
   echo 'Starting my first bash task'
-  whoami
+#  whoami
   
   echo 'Running Flyway'
   cd C:\Users\ajinth.christudas\Documents\flyway\flyway-8.5.9\
