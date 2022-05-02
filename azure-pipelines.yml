@@ -11,10 +11,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: 'Running Azure Pipeline'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: Bash@3
+  echo 'Starting my first bash task'
+  whoami
+  
+  echo 'Running Flyway'
+  cd C:\Users\ajinth.christudas\Documents\flyway\flyway-8.5.9\
+  echo 'In the flyway directory'
