@@ -7,8 +7,11 @@ trigger:
 - main
 - develop
 
-pool:
-  vmImage: ubuntu-latest
+# pool:
+#   vmImage: ubuntu-latest
+
+pool: 
+name: Self_Hosted_Agent_Pool
 
 steps:
 - script: echo Hello, world!
