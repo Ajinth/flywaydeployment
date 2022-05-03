@@ -11,13 +11,13 @@ trigger:
 #   vmImage: ubuntu-latest
 
 pool: 
-name: Self_Hosted_Agent_Pool
+  name: Self_Hosted_Agent_Pool
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+# - script: |
+#     echo Add other tasks to build, test, and deploy your project.
+#     echo See https://aka.ms/yaml
+#   displayName: 'Run a multi-line script'
