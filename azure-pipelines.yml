@@ -29,5 +29,6 @@ steps:
   inputs:
     TargetPath: '$(Build.Repository.LocalPath)'
     artifact: '$(Build.DefinitionName)'
-    publishLocation: 'pipeline'
+    # publishLocation: 'pipeline'
+    publishLocation: 'C:\Users\ajinth.christudas\buildartifacts\'
 
