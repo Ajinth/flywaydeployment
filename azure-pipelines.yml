@@ -6,6 +6,7 @@
 trigger:
 - main
 - develop
+- azure-pipelines
 
 # pool:
 #   vmImage: ubuntu-latest
