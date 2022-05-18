@@ -1,0 +1,30 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- azure-pipelines
+- main
+- develop
+
+# pool:
+#   vmImage: ubuntu-latest
+
+pool: 
+  name: Self_Hosted_Agent_Pool
+
+name: $(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)_$(Rev:.r)
+
+steps:
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: Build_Artifact'
+  inputs:
+    ArtifactName: 'Build_Artifact'
